@@ -1,0 +1,20 @@
+<p>
+段前的内容
+</p>
+<div contenteditable="true" placeholder="输入用户名"></div>
+<p>
+段后的内容
+</p>
+
+[contenteditable] {
+  width:800px;
+  border: 1px solid red; 
+  padding: 0.7rem;
+}
+[contenteditable]:empty:before {
+    content: attr(placeholder);
+    display: block;
+    // 这样设置line-height: normal可以解决问题，但是会导致输入的时候div突然变宽
+    // line-height: normal;
+    color: #999;
+    }
